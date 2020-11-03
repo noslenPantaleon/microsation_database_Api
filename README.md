@@ -2,8 +2,6 @@
 
 ## How to run this project in you localhost?
 
-#
-
 1 - You need to install nodejs from https://nodejs.org/
 
 2 - Rename .env.example to .env and fill in the credentials.
