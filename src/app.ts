@@ -6,13 +6,7 @@ import cors from 'cors';
 import passport from 'passport';
 import passportMiddleware from './middlewares/passport';
 
-import authRoute from './routes/auth.routes';
-import privateRoutes from './routes/private.routes';
-import petRoutes from './routes/pet.routes';
-import imageRoutes from './routes/image.routes';
-
-import { v4 as uuidv4 } from 'uuid';
-import multer from 'multer';
+import routes from './routes';
 import path from 'path';
 
 // initializations
@@ -30,33 +24,11 @@ app.use(express.static(path.join(__dirname, 'uploads')));
 app.use(passport.initialize());
 passport.use(passportMiddleware);
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads');
-  },
-  filename: (req, file, cd) => {
-    cd(null, '_petsLove_' + uuidv4() + path.extname(file.originalname));
-  },
-  // limits: { fileSize: 300000 },
-  // fileFilter: (req, file, cd) => {
-  //   const filetypes = /jpeg|jpg|png|gif/;
-  // },
-});
-
-app.use(
-  multer({
-    storage: storage,
-  }).array('image')
-);
-
 // routes
 app.get('/', (req, res) => {
-  res.send(`Welcome to petslove. Running in http://localhost:${app.get('port')}`);
+  res.send(`Welcome to Apanay 🌱`);
 });
 
-app.use(authRoute);
-app.use(privateRoutes);
-app.use(imageRoutes);
-app.use(petRoutes);
+app.use(routes);
 
 export default app;
