@@ -10,7 +10,11 @@
     "mongodb": "docker-compose --env-file .env up"
   },
   "keywords": [],
-  "author": "alex robaina",
+  "authors": {
+    "alex robaina",
+    "noslen pantaleon",
+    "adiel tapari",
+  },
   "license": "ISC",
   "dependencies": {
     "@types/dotenv": "^8.2.0",
