@@ -26,7 +26,7 @@ passport.use(passportMiddleware);
 
 // routes
 app.get('/', (req, res) => {
-  res.send(`Welcome to Apanay 🌱`);
+  res.send(`Welcome to Apanai 🌱`);
 });
 
 app.use(routes);

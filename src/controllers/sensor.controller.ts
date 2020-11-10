@@ -27,13 +27,14 @@ export const sensor = async (req: Request, res: Response) => {
 
     client.on('message', function (topic, message) {
       // message is Buffer
+      console.log(message)
       console.log(message.toString());
       client.end();
     });
 
-    const register = await Sensor.create(req.body);
+    // const register = await Sensor.create(req.body);
 
-    await register.save();
+    // await register.save();
     res.status(200).send({
       message: 'Llego apanay 🌱',
     });
