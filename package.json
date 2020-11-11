@@ -1,5 +1,5 @@
 {
-  "name": "apanay",
+  "name": "apanai",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,11 +10,7 @@
     "mongodb": "docker-compose --env-file .env up"
   },
   "keywords": [],
-  "authors": {
-    "alex robaina",
-    "noslen pantaleon",
-    "adiel tapari",
-  },
+  "author": "alex robaina",
   "license": "ISC",
   "dependencies": {
     "@types/dotenv": "^8.2.0",
